@@ -1,4 +1,4 @@
-# Mechavela 0.3.2-alpha.1 — Your AI robotics workspace
+# Mechavela 0.3.2-alpha.2 — Your AI robotics workspace
 
 **Your AI. Real CAD. Real simulation.**
 
@@ -7,7 +7,7 @@ First public Mechavela source technology preview, based on the existing RLSOK de
 ## Try it
 
 1. Install normal Python 3.12+ on Windows.
-2. Download `Mechavela-0.3.2-alpha.1-source.zip` and extract it.
+2. Download `Mechavela-0.3.2-alpha.2-source.zip` and extract it.
 3. Double-click `Launch-Mechavela.cmd`, or run `python launch.py`.
 4. Create a blank project. See `docs/GETTING_STARTED.md` to configure your own AI and engineering tools.
 

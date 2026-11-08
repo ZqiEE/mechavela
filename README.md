@@ -23,7 +23,7 @@ The platform supplies tools and feedback. Robot designs, controllers, planning a
 
 **Windows 10/11, Python 3.12+ recommended.** Download this repository, extract it, and double-click `Launch-Mechavela.cmd`, or run:
 
-[Download the source preview](https://github.com/ZqiEE/mechavela/releases/tag/v0.3.2-alpha.1)
+[Download the source preview](https://github.com/ZqiEE/mechavela/releases/tag/v0.3.2-alpha.2)
 
 ```sh
 python launch.py

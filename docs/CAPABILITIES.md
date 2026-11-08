@@ -1,6 +1,6 @@
 # Evidence and scope
 
-This snapshot derives from the locally tested RLSOK 0.3.2-dev.24 workbench, now branded **Mechavela 0.3.2-alpha.1**. Original installations and project history are preserved. Rebranding does not re-certify every earlier feature.
+This snapshot derives from the locally tested RLSOK 0.3.2-dev.24 workbench, now branded **Mechavela 0.3.2-alpha.2**. Original installations and project history are preserved. Rebranding does not re-certify every earlier feature.
 
 | Capability | Evidence / boundary |
 |---|---|

@@ -21,3 +21,9 @@ Port8890 was already occupied during browser setup. The launcher refused it and 
 The source secret/size scanner passed before publication. A separate identifier search found none of the developer's known personal account/path/server identifiers in the public snapshot. No private run archive, owner CAD profile, API credential, grant/approval file, data library, embedded Python or native tool runtime is included. This is a bounded scan, not a promise that arbitrary future content is safe to publish.
 
 Full AI/CAD/MuJoCo workflows were not rerun after branding. Earlier development evidence is summarized separately in CAPABILITIES.md, with its exact scope and limitations. The source release is not the previous signed/native installer release gate and does not claim that gate passed.
+
+## alpha.2 and first hosted Windows result
+
+The initial GitHub-hosted Python3.12 Windows run of alpha.1 executed all19 tests but failed one path assertion: `RUNNER~1` and `runneradmin` denoted the same temporary directory. The launcher correctly resolved the long form, while the test compared it with an unresolved short form. alpha.2 resolves both paths and reads the expected version from VERSION, retaining all actual process/persistence checks. The failed run is retained: https://github.com/ZqiEE/mechavela/actions/runs/42461465249 . Hosted CI status for the repaired commit is available in Actions; a locally passing result alone is not recorded as a hosted pass.
+
+The first archive attempt exposed Git autocrlf converting source line endings after manifest creation. That ZIP was not attached to a Release. Packaging now disables archive line-ending conversion and verifies every ZIP payload against the tracked-source manifest before uploading. Published checksums refer to the verified archive only.

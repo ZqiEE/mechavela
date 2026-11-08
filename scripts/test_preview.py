@@ -29,10 +29,10 @@ class SourcePreviewTest(unittest.TestCase):
     def test_actual_launch_brand_isolation_and_reuse(self):
         info=self.call('workspace/product')
         self.assertEqual(info['name'],'Mechavela Robotics Workspace')
-        self.assertEqual(Path(info['data_dir']),self.data)
+        self.assertEqual(Path(info['data_dir']).resolve(),self.data.resolve())
         with urllib.request.urlopen(self.url+'/workspace.html') as f:html=f.read().decode()
         self.assertIn('Mechavela',html);self.assertNotIn('RLSOK home',html)
-        self.launch();self.assertEqual(self.call('workspace/product')['version'],'0.3.2-alpha.1')
+        self.launch();self.assertEqual(self.call('workspace/product')['version'],(ROOT/'VERSION').read_text().strip())
     def test_real_project_restart_restore_and_export(self):
         p=self.call('workspace/create',{'name':'Preview persistence','intent':'Editable custom engineering project','morphology':'custom','assets':{'requirements.md':'Keep this exact requirement.'}})
         self.call('workspace/session',{'project':p['id']})

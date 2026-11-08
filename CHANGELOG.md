@@ -1,3 +1,11 @@
+# 0.3.2-alpha.2 — Windows CI compatibility
+
+2026-11-08
+
+- First GitHub-hosted Windows run exposed a test assertion comparing an 8.3 short temp path with its resolved long form. Compare resolved identities; keep the actual application/data-isolation checks.
+- The real source-launcher tests still create/restart/export projects and retain all original protection checks.
+- No CAD engine, robot algorithm, project permissions or resource limits changed.
+
 # 0.3.2-alpha.1 — Mechavela source preview
 
 2026-11-08
