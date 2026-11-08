@@ -1,0 +1,56 @@
+{
+  "openroad_package": {
+    "url": "https://github.com/Precision-Innovations/OpenROAD/releases/download/2.0-16524-g4cc9d2133/openroad_2.0-16524-g4cc9d2133_amd64-ubuntu22.04-2.0-16524-g4cc9d2133.deb",
+    "size": 55991246,
+    "sha256": "2c1c230d124cb522db103dd777dd335672dcadc2821bb3a58c9f4dc8121ddfb4"
+  },
+  "package_dependencies": "libc6 (>= 2.35), libgcc-s1 (>= 7), libgomp1 (>= 6), libpython3.10 (>= 3.10.0), libqt5charts5 (>= 5.7.1), libqt5core5a (>= 5.15.1), libqt5gui5 (>= 5.14.1) | libqt5gui5-gles (>= 5.14.1), libqt5widgets5 (>= 5.11.0~rc1), libstdc++6 (>= 12), libtcl8.6 (>= 8.6.0), tcl-tclreadline (>= 2.3.8), zlib1g (>= 1:1.1.4)",
+  "library_repository_commit": "e97f852b01dfcaaa1031510d1bc1f4df7bb90139",
+  "library_files": {
+    "lef/NangateOpenCellLibrary.tech.lef": {
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/e97f852b01dfcaaa1031510d1bc1f4df7bb90139/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef",
+      "size": 19485,
+      "sha256": "834a79295054cd4209178d1bade67c353863c47bb4b3c22ee38b862b7cec37f2"
+    },
+    "lef/NangateOpenCellLibrary.macro.mod.lef": {
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/e97f852b01dfcaaa1031510d1bc1f4df7bb90139/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef",
+      "size": 255903,
+      "sha256": "a43aea339f12a57a63497783e508ba16f3da2dc056d3247dec7d99707c2dedef"
+    },
+    "lib/NangateOpenCellLibrary_typical.lib": {
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/e97f852b01dfcaaa1031510d1bc1f4df7bb90139/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib",
+      "size": 6692032,
+      "sha256": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1"
+    },
+    "setRC.tcl": {
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/e97f852b01dfcaaa1031510d1bc1f4df7bb90139/flow/platforms/nangate45/setRC.tcl",
+      "size": 828,
+      "sha256": "521df813bf4da9d7400df33e3f680c9a328cc720830dbfca1188083741503fa5"
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/e97f852b01dfcaaa1031510d1bc1f4df7bb90139/flow/platforms/nangate45/LICENSE",
+      "size": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    "rcx_patterns.rules": {
+      "sha256": "2f65fafbe2c704b378563c53a680b93cef080c2799997019d43df7d1e5a563e9",
+      "size": 134186,
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/e97f852b01dfcaaa1031510d1bc1f4df7bb90139/flow/platforms/nangate45/rcx_patterns.rules"
+    },
+    "make_tracks.tcl": {
+      "sha256": "8f8fbff8d8e0dfd232307058f6766973742e36f8f27bd1c717ea001e142cba99",
+      "size": 773,
+      "url": "https://raw.githubusercontent.com/The-OpenROAD-Project/OpenROAD-flow-scripts/e97f852b01dfcaaa1031510d1bc1f4df7bb90139/flow/platforms/nangate45/make_tracks.tcl"
+    }
+  },
+  "installed_yosys": "Yosys 0.9 (git sha1 1979e0b)",
+  "yosys_binary_sha256": "dab84e88b53146fe22d675a142de32b1e545ee9b7fe1054238f6220245b24c8d",
+  "openroad_binary_sha256": "e945dd874126dd47ec2ff5a93117117313aa71de14a75f6c4ec4e162141aa190",
+  "openroad_version": "v2.0-16524-g4cc9d2133",
+  "dependencies": [
+    "berkeley-abc=1.01+20211229git48498af+dfsg-2",
+    "libqt5charts5=5.15.3-1",
+    "tcl-tclreadline=2.3.8-1",
+    "yosys=0.9-2"
+  ]
+}

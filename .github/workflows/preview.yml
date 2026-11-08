@@ -1,0 +1,13 @@
+name: Source preview checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest scripts.test_workspace_session scripts.test_freecad_host scripts.test_preview

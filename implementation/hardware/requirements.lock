@@ -1,0 +1,3 @@
+# Optional official ROBOTIS SDK; no hardware port is opened on import/installation.
+dynamixel-sdk==4.1.0
+pyserial==3.5

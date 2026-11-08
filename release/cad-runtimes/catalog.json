@@ -1,0 +1,35 @@
+{
+  "schema": "rlsok.cad-runtime-catalog/1",
+  "profiles": [
+    {
+      "id": "freecad-weekly-20261104-cp313-win64-host",
+      "mode": "external-host",
+      "platform": "windows-x86_64",
+      "python_abi": "cp313",
+      "versions": {"FreeCAD": "27.1.0-weekly-2026.11.04", "Python": "3.13.18", "OCCT": "8.0.1"},
+      "declared_capabilities": ["parametric.documents", "step.solids", "assembly.static-checks", "cad.tessellation", "cad.visual-mesh"],
+      "known_constraint": "Official development host. dev.23 integrates owner-selected project runtime=freecad, inspect_design, native OCCT glTF/materials and recorded assembly display. Real official AI authored CAD from an empty project, corrected native feedback and exported; preserved 297-solid CAD also passed native inspection/display. Requires owner configuration and explicit project permissions, never automatic activation. Old OCP remains unapproved; physics needs separate qualification. Two unused unsigned PowerShell activation scripts remain unexecuted and the raw upstream archive release gate remains BLOCKED. Development preview, not a stable release.",
+      "evidence": "usage/freecad-integration-20261106/empty-project-acceptance.json"
+    },
+    {
+      "id": "build123d-013-ocp8-cp312-win64",
+      "mode": "bundled-python",
+      "platform": "windows-x86_64",
+      "python_abi": "cp312",
+      "versions": {"build123d": "0.13.0", "cadquery-ocp-novtk": "8.0.1.1.0"},
+      "declared_capabilities": ["step.solids", "assembly.static-checks", "cad.visual-mesh"],
+      "known_constraint": "Known SAC denial for the unchanged unsigned TKDEIGES payload; do not retry by changing paths or interpreters. Requires a newly approved complete runtime.",
+      "evidence": "usage/spider-user-workflow-20261105/CAD_TRUST_DIAGNOSIS.md"
+    },
+    {
+      "id": "freecad-114-py311-win64-host",
+      "mode": "external-host",
+      "platform": "windows-x86_64",
+      "python_abi": "cp311",
+      "versions": {"FreeCAD": "1.1.4"},
+      "declared_capabilities": ["step.solids", "parametric.documents"],
+      "known_constraint": "Signed launcher version probe passed; real CAD import was denied for Materials.pyd. Not a drop-in OCP8 DLL replacement, not an implemented RLSOK provider.",
+      "evidence": "usage/spider-user-workflow-20261105/FREECAD_TRUST_RESULT.md"
+    }
+  ]
+}

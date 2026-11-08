@@ -1,0 +1,4 @@
+# Reference workstation: CPython 3.12.14, Windows. Other platforms NOT_VERIFIED.
+# MuJoCo CPU dynamics; browser Three.js is already vendored with its license.
+mujoco==3.16.0
+numpy==2.5.4

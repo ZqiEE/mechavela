@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mechavela</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+<script src="i18n.js" defer></script>
+<script src="i18n_extra.js" defer></script>
+<script src="i18n_ux.js" defer></script>
+<script src="app.js" defer></script>
+<script type="importmap">{"imports": {"three": "./vendor/three.module.min.js"}}</script>
+<script type="module" src="viz.js"></script>
+</head>
+<body>
+<header class="bar">
+  <span class="brand">Mechavela</span>
+  <a class="navbtn" href="workspace.html">Robot workspace</a>
+  <nav class="right">
+    <span id="caps" class="caps"></span>
+    <a class="navbtn" href="help.html" data-t="help">帮助</a>
+    <button id="open-setup" class="navbtn" type="button" data-t="settings">设置</button>
+    <button id="lang" class="navbtn" type="button">EN</button>
+    <button id="quit" class="navbtn" type="button" data-t="quit">退出</button>
+  </nav>
+</header>
+
+<!-- first open (UX_SPEC 7.1): one question, three big cards; settings only when they are needed -->
+<section id="welcome" class="welcome" hidden aria-modal="true" role="dialog" aria-labelledby="welcome-title">
+  <div class="welcome-card">
+    <h1 id="welcome-title" data-t="welcomeT">你想先看什么？</h1>
+    <p class="note" data-t="welcomeSub"></p>
+    <div class="wcards">
+      <button type="button" class="wcard" data-w="bird"><svg viewBox="0 0 200 90" aria-hidden="true"><path d="M20 60 Q60 20 100 48 Q140 20 180 60" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><circle cx="100" cy="52" r="6" fill="currentColor"/></svg><b data-t="w1T"></b><span data-t="w1"></span></button>
+      <button type="button" class="wcard" data-w="circuit"><svg viewBox="0 0 200 90" aria-hidden="true"><path d="M20 45 h40 l10 -20 l20 40 l20 -40 l20 40 l10 -20 h40" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/></svg><b data-t="w2T"></b><span data-t="w2"></span></button>
+      <button type="button" class="wcard" data-w="robot"><svg viewBox="0 0 200 90" aria-hidden="true"><rect x="80" y="10" width="40" height="34" rx="6" fill="none" stroke="currentColor" stroke-width="5"/><path d="M90 44 l-14 36 M110 44 l14 36" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg><b data-t="w3T"></b><span data-t="w3"></span></button>
+    </div>
+    <button type="button" id="welcome-skip" class="btn ghost" data-t="wSkip">先随便看看</button>
+  </div>
+</section>
+
+<!-- AI / PC / training settings, opened only when a feature needs them (or from 设置) -->
+<section id="setup" class="setup" hidden aria-modal="true" role="dialog" aria-labelledby="setup-title">
+  <div class="setup-card">
+    <ol class="setup-steps" id="setup-steps"></ol>
+    <div id="setup-body"></div>
+    <div class="setup-nav"><button id="setup-back" class="btn" type="button" data-t="back">上一步</button><span class="grow"></span>
+      <button id="setup-skip" class="btn ghost" type="button" data-t="later">稍后再说</button><button id="setup-next" class="btn primary" type="button" data-t="next">下一步</button></div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="ask">
+    <form id="ask-form">
+      <label for="sentence" class="ask-label" data-t="askTitle">用一句话说出你要做什么</label>
+      <div class="ask-row">
+        <textarea id="sentence" rows="1" maxlength="2000"></textarea>
+        <button class="go" type="submit" data-t="start">开始</button>
+      </div>
+      <div class="route">
+        <span id="route-note" class="note" aria-live="polite"></span>
+        <button type="button" id="route-edit" class="linkbtn" data-t="routeEdit" hidden>修改</button>
+        <select id="pipe-pick" hidden></select>
+      </div>
+    </form>
+  </section>
+
+  <section id="examples" class="examples" aria-labelledby="ex-title">
+    <div class="sec-head"><h2 id="ex-title" class="label" data-t="exTitle">从一个示例开始</h2><span class="note" data-t="exSub"></span></div>
+    <div id="ex-cards" class="ex-cards"></div>
+  </section>
+
+  <section class="work">
+    <aside class="jobs-col">
+      <h2 class="label" data-t="jobs">我的项目</h2>
+      <div id="jobs" class="jobs"></div>
+    </aside>
+    <section id="detail" class="detail" aria-live="polite"></section>
+  </section>
+
+  <details class="library">
+    <summary data-t="libT">详细数据和资料库</summary>
+    <div class="tabs" role="tablist">
+      <button role="tab" data-tab="robots" aria-selected="true" data-t="tRobots">机器人</button>
+      <button role="tab" data-tab="circuits" aria-selected="false" data-t="tCircuits">电路</button>
+      <button role="tab" data-tab="trains" aria-selected="false" data-t="tTrains">训练</button>
+      <button role="tab" data-tab="uploads" aria-selected="false" data-t="tUploads">真机数据</button>
+    </div>
+    <div id="panel" role="tabpanel"></div>
+  </details>
+</main>
+<footer class="wrap foot" data-t="footer"></footer>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

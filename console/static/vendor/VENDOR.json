@@ -1,0 +1,4 @@
+﻿{"three": {"version": "0.170.0", "license": "MIT", "source": "https://registry.npmjs.org/three/-/three-0.170.0.tgz",
+ "integrity": "sha512-FQK+LEpYc0fBD+J8g6oSEyyNzjp+Q7Ks1C568WWaoMRLW+TkNNWmenWeGgJjV105Gd+p/2ql1ZcjYvNiPZBhuQ==",
+ "files": ["three.module.min.js (build/)", "OrbitControls.js (examples/jsm/controls/)", "STLLoader.js (examples/jsm/loaders/)"],
+ "retrieved": "2026-10-22"}}

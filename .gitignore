@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.zip
+.local-data/
+test-results/
+node_modules/

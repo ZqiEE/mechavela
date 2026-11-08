@@ -1,0 +1,26 @@
+{
+  "version": "0.170.0",
+  "files": {
+    "GLTFLoader.js": {
+      "source": "https://raw.githubusercontent.com/mrdoob/three.js/r170/examples/jsm/loaders/GLTFLoader.js",
+      "upstream_sha256": "45139faddd5aaf48ed2d62203d976e5cbd703db1a592de40527f9f6cf58abd44",
+      "local_sha256": "956746f80fe2af1650a6c0b156ac619f2c66ab9fc697e1d81d3bce1e4654a5d0",
+      "changes": "Only local dependency import path",
+      "license": "MIT; LICENSE-three.txt"
+    },
+    "BufferGeometryUtils.js": {
+      "source": "https://raw.githubusercontent.com/mrdoob/three.js/r170/examples/jsm/utils/BufferGeometryUtils.js",
+      "upstream_sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6",
+      "local_sha256": "5beb9dc7e9248a32f7b5e8cc0dd5fd4054d227d8e19a3a98b4715f6d2784c4ef",
+      "changes": "None",
+      "license": "MIT; LICENSE-three.txt"
+    },
+    "RoomEnvironment.js": {
+      "source": "https://raw.githubusercontent.com/mrdoob/three.js/r170/examples/jsm/environments/RoomEnvironment.js",
+      "upstream_sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014",
+      "local_sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014",
+      "changes": "None",
+      "license": "MIT; LICENSE-three.txt"
+    }
+  }
+}

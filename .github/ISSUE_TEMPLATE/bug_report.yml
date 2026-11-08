@@ -1,0 +1,22 @@
+name: Bug report / 问题反馈
+description: Report a reproducible problem without secrets or private projects.
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: OS, Python and tool versions / 环境版本
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and expected result / 操作步骤及预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result / 实际结果
+      description: Remove API keys, credentials, approval files and private paths before posting.
+    validations:
+      required: true
